@@ -42,7 +42,7 @@ sources in (Compile, doc) := Seq.empty
 publishArtifact in (Compile, packageDoc) := false
 
 herokuProcessTypes in Compile := Map(
-  "web" -> "target/universal/stage/bin/wishlist -Dconfig.resource=production.conf -Dhttp.port=$PORT"
+  "web" -> "target/universal/stage/bin/wishlist -Dconfig.resource=production.conf -Dhttp.port=process.env.PORT"
 )
 
 herokuAppName in Compile := sys.props.getOrElse("herokuApp","")
