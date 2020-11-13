@@ -1,4 +1,4 @@
-GET	 /					   controllers.Application.index
+GET	 /					   controllers.Application.index()
 GET	 /index.html		controllers.Application.redirectToIndex
 GET	 /about.html		controllers.Application.about
 
